@@ -14,7 +14,7 @@ def entropy(self):
         else:
             dict[self.name1[i]] = 1
     entropy = 0
-    for i in dict.keys():
+    for i in dict.keys():   #i不是数字，而是键值
         p = float(dict[i]) / self.len
         entropy = entropy - p * math.log(p, 2)
     return entropy
